@@ -1,0 +1,71 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: 'Raleway', sans-serif;
+}
+th {
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+}
+
+.dock-item{
+  // float: left;
+  width: 100px;
+  margin-top: 100px;
+
+}
+
+.bookmark {
+  // float: left;
+}
+
+.table-hero {
+  margin-top: 200px;
+}
+
+.error {
+  color: red;
+}
+
+.header-hero {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-image: url('http://68.media.tumblr.com/tumblr_lh6iv4hWCQ1qgef94o1_1280.png');
+}
+
+.header-hero h1 {
+  // background-color: white;
+  color: #262a10;
+  font-family: 'Permanent Marker', cursive;
+  // width: 30%
+}
+
+div {
+  // border: 1px dotted green;
+}
+
+.header-container {
+  background-color: #e8985e;
+  width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  // border-style: groove;
+}
+
+.book-form {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}

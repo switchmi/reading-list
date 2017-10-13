@@ -1,0 +1,37 @@
+<!-- <h1>Book</h1> -->
+
+<!-- <ul>
+  <li>
+    <h2>Title</h2>
+    <p><%= @book.name %></p>
+  </li>
+  <li>
+    <h2>Author</h2>
+    <p><%= @book.author %></p>
+  </li>
+  <li>
+    <h2>Read</h2>
+      <% if @book.read %>
+        <p>Book Read!</p>
+      <% else %>
+        <p>Book Not Read :(</p>
+      <% end %>
+  </li>
+</ul>
+
+<%= link_to 'Back to Book List', books_path %> -->
+
+
+<div class="card text-center">
+  <div class="card-header">
+    Book
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">Title: <%= @book.name %></h4>
+    <p class="card-text">Author: <%= @book.author %></p>
+    <%= link_to 'Back to Book List', books_path, class: "btn btn-primary" %>
+  </div>
+  <div class="card-footer text-muted">
+    Last updated: <%= @book.updated_at %>
+  </div>
+</div>

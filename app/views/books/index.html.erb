@@ -1,0 +1,53 @@
+<div class="d-flex flex-column">
+  <div class="container-fluid">
+    <div class="header-hero fixed-top">
+      <div class="container header-container">
+        <h1 class='display-3'>My Reading List</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="float-left fixed-top">
+    <%= link_to image_tag("notebook.svg", :border => 0, :alt => '', :title => '', :class => 'dock-item'), new_book_path %>
+  </div>
+
+  <div class="table-hero">
+    <table class='table table-striped table-bordered table-hover table-responsive table-inverse'>
+      <thead class='thead-default thead-inverse'>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Read</th>
+          <th colspan="3" class="options-header">Options</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% index = 0 %>
+        <% @books.each do |book| %>
+        <% index += 1 %>
+        <tr>
+          <td><%= index %></td>
+          <td><%= book.name %></td>
+          <td><%= book.author %></td>
+          <td>
+            <% if book.read %>
+              <p class="badge badge-success">Read</p>
+            <% else %>
+              <p class="badge badge-dark">Not Read</p>
+            <% end %>
+          </td>
+          <td><%= link_to 'Show ', book_path(book), method: :get %> </td>
+          <td><%= link_to 'Edit', edit_book_path(book), method: :get %> </td>
+          <td><%= link_to 'Delete', book_path(book), method: :delete, data: {confirm: 'Are you sure?'} %> </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+</div>

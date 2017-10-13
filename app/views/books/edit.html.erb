@@ -1,0 +1,21 @@
+<div class="book-form">
+  <h1>Edit Book Details</h1>
+
+  <%= simple_form_for(@books, html: {class: 'form-horizontal'}) do |f| %>
+
+    <div class="form-group">
+      <%= f.input :name, placeholder: 'Book title', error: 'Book title is mandatory, please specify!', class: 'form-control'  %>
+    </div>
+
+    <div class="form-group">
+      <p><%= f.input :author, placeholder: 'Name of author', error: 'Author is mandatory, please specify!', class: 'form-control' %></p>
+    </div>
+      <div class="form-check">
+      <p><%= f.input :read, as: :boolean %></p>
+    </div>
+    <p><%= f.button :submit, class:'btn btn-outline-primary' %></p>
+
+  <% end %>
+
+  <%= link_to 'Book List', books_path %>
+</div>
