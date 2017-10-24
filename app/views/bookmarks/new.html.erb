@@ -1,0 +1,19 @@
+<div class="book-form">
+  <h1>Create Bookmark</h1>
+
+  <%= simple_form_for @book.bookmarks.build, url: book_bookmarks_path(@book), html: {class: 'form-horizontal'}, method: :post  do |f| %>
+
+    <div class="form-group">
+      <%= f.input :page_num, placeholder: 'Bookmark page number', error: 'page is mandatory, please specify!', class: 'form-control'  %>
+    </div>
+
+    <div class="form-group">
+      <p><%= f.input :description, placeholder: 'Enter description', class: 'form-control' %></p>
+    </div>
+
+    <p><%= f.button :submit, class:'btn btn-outline-primary' %></p>
+
+  <% end %>
+
+  <%= link_to 'Book List', books_path %>
+</div>
